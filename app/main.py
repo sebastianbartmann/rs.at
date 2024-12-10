@@ -34,6 +34,13 @@ async def read_root(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
 
+
+@app.get("/test")
+async def read_root(request: Request):
+    return templates.TemplateResponse("test.html", {"request": request})
+
+
+
 # Serve robots.txt and sitemap.xml directly
 @app.get("/robots.txt")
 async def robots_txt():
